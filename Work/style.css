@@ -1,7 +1,6 @@
 /* ESTILO GRID */
 
 
-
 /* Reset */
 * {
     margin: 0;
@@ -10,7 +9,6 @@
 }
 
 /*VARIABLES*/
-
 :root {
     --accent: #97BEF2;
     --accent-dark: #3A5F9B;
@@ -24,7 +22,6 @@
 }
 
 /*LETRA*/
-
 html, body {
 height: 100%;
 color: var(--text);
@@ -35,7 +32,6 @@ line-height: 1.5;
 }
 
 /*TEXTO*/
-
 h1, h2, h3 {
     color: var(--accent-dark);
     font-weight: 600;
@@ -49,7 +45,6 @@ p{margin-bottom: 0.5rem; color: var(--muted-text)}
 ul {list-style: none;}
 
 /*LINKS*/ 
-
 a   {
     color: var(--accent-dark);
     text-decoration: none;
@@ -57,7 +52,6 @@ a   {
 a:focus, a:hover {text-decoration: underline; outline: none;}
 
 /*una ayuda*/
-
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -84,6 +78,7 @@ a:focus, a:hover {text-decoration: underline; outline: none;}
     font-weight: 500;
 }
 
+/*foto*/
 .foto {
     width: 140px;
     height: 140px;
@@ -149,6 +144,43 @@ margin-bottom: 0.45rem;
 
 /* LAS TABLAS (educacion y proyectos) */
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    }
+
+caption {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    }
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.55rem 0.7rem;
+    vertical-align: middle;
+    text-align: left;
+}
+
+thead th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+}
+
+tbody th {
+    background: #f7f7f7;
+    font-weight: 600;
+    }
+
+/* ESTILOS ADICIONALES*/
+
+:focus {
+    outline: 3px solid rgba(58,95,155,0.18);
+    outline-offset: 2px;
+}
 
 
 
