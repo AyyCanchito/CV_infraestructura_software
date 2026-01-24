@@ -70,69 +70,96 @@ a:focus, a:hover {text-decoration: underline; outline: none;}
     background: var(--accent);
     color: #fff;
     padding: 2rem 1 rem;
-    position: relative
+    position: relative;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    
+}
+
+.texto-header h1 {
+    font-size: 1.9rem;
+    line-height: 1;
+}
+
+.subtitulo {
+    color: rgba(39, 146, 245, 0.8);
+    font-weight: 500;
+}
+
+.foto {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    left: 1.5rem;
+    bottom: -70px; /*sobresale la mitad del alto*/
+    border: 6px solid #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background: #eaeaea;
 }
 
 
+/*GRID PRINCIPAL*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Tabla de Historial Academico*/
-.educacion {
-    border:1px solid #C0C0C0;
-    border-collapse:collapse;
-    padding:5px;
-}
-.educacion th {
-    border:1px solid #C0C0C0;
-    padding:5px;
-    background:#97BEF2;
-}
-.educacion td {
-    border:1px solid #C0C0C0;
-    padding:5px;
+.cv-grid {
+    display: grid;
+    grid-template-columns: 1fr; /*celuar, el displau sera una columna*/
+    gap: var(--gap);
+    max-width: var(--max-width);
+    margin: calc(70px + 1.5rem) auto 2rem; /*este espacio es para la foto*/
+    padding: 0 1rem;
 }
 
-/* Tabla de Proyectos Personales*/
-.proyectos {
-    border:1px solid #C0C0C0;
-    border-collapse:collapse;
-    padding:5px;
+/*COLUMNA IZQUIERDA*/
+
+.cv_izquierda {
+    background: var(--muted-bg);
+    padding:  1rem;
+    border-radius: 8px;
 }
-.proyectos th {
-    border:1px solid #C0C0C0;
-    padding:5px;
-    background:#97BEF2;
+
+.cv_izquierda .bloque {
+    margin-bottom: 1.25rem;
 }
-.proyectos td {
-    border:1px solid #C0C0C0;
-    padding:5px;
+
+/* Espacios */
+
+.cv_izquierda ul li {
+    margin-bottom: 0.45rem;
+    color: var(--text);
+    font-size: 0.95rem;
 }
+
+.links a {
+display: inline-block;
+margin-bottom: 0.45rem;
+}
+
+/*COLUMNA DERECHA*/
+
+.cv_derecha {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+}
+
+.cv_derecha .bloque {
+    margin-bottom: 1.6rem;
+}
+
+/* LAS TABLAS (educacion y proyectos) */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
