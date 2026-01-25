@@ -182,12 +182,35 @@ tbody th {
     outline-offset: 2px;
 }
 
+/*Media queries*/ 
 
+/*Celular*/
 
+@media (max-width: 479px) {
+    .cv-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: calc(70px + 1 rem) auto 1.25rem;
+        padding: 0 0.8rem;
+    }
+}
 
+.foto {
+    width: 96px;
+    height: 96px;
+    position: static;
+    margin: 0 auto;
+    display: block;
+    border-width: 4px;
+    bottom: auto;
+}
 
+h1 { font-size: 1.4rem; }
+h3 { font-size: 1rem; }
 
-
+table { font-size: 0.9rem; }
+.cv_derecha { padding: 0.8rem; }
+.cv_izquierda  { padding: 0.8rem; }
 
 
 
