@@ -28,11 +28,11 @@ color: var(--text);
 background: #fff;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
-line-height: 1.5;
+line-height: 2.0;
 }
 
 /*TEXTO*/
-h1, h2, h3 {
+h1, h3 {
     color: var(--accent-dark);
     font-weight: 600;
 }
@@ -47,7 +47,6 @@ ul {list-style: none;}
 /*LINKS*/ 
 a   {
     color: var(--accent-dark);
-    text-decoration: none;
 }
 a:focus, a:hover {text-decoration: underline; outline: none;}
 
@@ -59,7 +58,6 @@ a:focus, a:hover {text-decoration: underline; outline: none;}
 }
 
 /*---HEADER---*/
-
 .header {
     background: var(--accent);
     color: #fff;
@@ -68,9 +66,10 @@ a:focus, a:hover {text-decoration: underline; outline: none;}
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.texto-header h1 {
-    font-size: 1.9rem;
-    line-height: 1;
+.texto-header {
+    display: grid;
+    place-items: center;
+    text-align: center;
 }
 
 .subtitulo {
@@ -82,14 +81,11 @@ a:focus, a:hover {text-decoration: underline; outline: none;}
 .foto {
     width: 140px;
     height: 140px;
-    border-radius: 50%;
     object-fit: cover;
     position: absolute;
     left: 1.5rem;
     bottom: -70px; /*sobresale la mitad del alto*/
     border: 6px solid #fff;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    background: #eaeaea;
 }
 
 
@@ -97,10 +93,10 @@ a:focus, a:hover {text-decoration: underline; outline: none;}
 
 .cv-grid {
     display: grid;
-    grid-template-columns: 1fr; /*celuar, el displau sera una columna*/
+    grid-template-columns: 1fr; 
     gap: var(--gap);
     max-width: var(--max-width);
-    margin: calc(70px + 1.5rem) auto 2rem; /*este espacio es para la foto*/
+    margin: calc(70px + 1.5rem) auto 2rem;
     padding: 0 1rem;
 }
 
@@ -185,7 +181,6 @@ tbody th {
 /*Media queries*/ 
 
 /*Celular*/
-
 @media (max-width: 479px) {
     .cv-grid {
         grid-template-columns: 1fr;
@@ -213,8 +208,52 @@ table { font-size: 0.9rem; }
 .cv_izquierda  { padding: 0.8rem; }
 
 
+/*COMPUTADORA*/
+@media (min-width: 1024px) {
+.cv-grid {
+    grid-template-columns: var(--sidebar-width, 300px) 1fr;
+    gap: 2rem;
+    margin-top: calc(80px + 2rem);
+    padding: 0 2rem;
+    }
+}
+
+.foto {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    left: 2rem;
+    bottom: -80px;
+    border-width: 6px;
+}
+
+.cv_izquierda { padding: 2rem; }
+.cv_derecha { padding: 2rem; }
+.header h1 { font-size: 2.2rem; }
+
+/*TABLET*/
+
+@media (min-width: 720px) and (max-width: 1023px) {
+.cv-grid {
+grid-template-columns: var(--sidebar-width, 280px) 1fr;
+gap: 1.5rem;
+margin-top: calc(70px + 1.5rem);
+padding: 0 1rem;
+    }
+}
+
+.foto {
+width: 120px;
+height: 120px;
+position: absolute;
+left: 1.25rem;
+bottom: -60px;
+border-width: 5px;
+}
+
+.cv_izquierda { padding: 1.25rem; }
+.cv_derecha { padding: 1.25rem; }
 
 
-
-
-
+h1 { font-size: 1.8rem; }
+h3 { font-size: 1.05rem; }
