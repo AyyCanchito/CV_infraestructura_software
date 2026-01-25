@@ -1,76 +1,123 @@
-<header>
-<h1>Mi CV</h1>
+<!--title-->
+<head>
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<!--Header-->
+<header class="header">
+    <img src="imagen/Foto_CV_Alexander.JPG" alt="Foto de Alexander" width="200" class="foto"> <!--IMAGEN-->
+    <div class="texto-header">
+        <h1>Alexander López</h1>
+        <p class="subtitulo">Estudiante / Desarrollador</p>
+    </div>
 </header>
 
-<nav>
-<a href="mailto:alexander.lopez@ufm.edu">Contáctame</a>
-<a href="https://github.com/AyyCanchito" target="_blank">Github</a>
-<a href="https://gt.linkedin.com/" target="blank">Linkedin</a>
-</nav>
 
-<h3>Hobbies</h3>
-<ul>
-    <li>Estudiar</li>
-    <li>Leer</li>
-    <li>Me gusta jugar videojuegos</li>
-</ul>
-    
-<h3>Habilidades</h3>
-<ul>
-    <li>Programar con Python</li>
-    <li>Conocimiento en Hardware</li>
-</ul>
-
-<h3>Formación académica</h3>
-<ul>
-    <li>Titulo en bachiller en Ciencias y Letras</li>
-    <li>Ingles (intermedio)</li>
-</ul>
-
-<section id="educacion">
-<h3>Educación</h3>
-<table>
-    <caption>Historial Académico</caption>
-    <thead>
-        <tr>
-            <th scope="col">Año</th>
-            <th scope="col">Institución</th> 
-            <th scope="col">Titulo</th> 
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>2016 - 2023</td>
-            <td>Colegio Hebrón</td>
-            <td>Bachiller en Ciencias y Letras</td>
-        </tr>
-    </tbody>
-</table>
-
-<section id="Proyecto personales">
-    <h3>Experiencia Laboral</h3>
-    <table>
-        <caption>Proyecto personales desarrollador en el transcurso de mi vida</caption>
-        <thead>
-            <tr>
-                <th scope="col">Periodo</th>
-                <th scope="col">Tipo</th>
-                <th scope="col">Puesto</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td scope="row">2020 - 2021</td>
-                <td scope="row">Karate</td>
-                <td scope="row">Coach</td>
-            </tr>
-            <tr>
-                <td scope="row">2025 - continúa</td>
-                <td scope="row">Contenido</td>
-                <td scope="row">Streamer/Youtuber</td>
-            </tr>
-        </tbody>
-    </table>
+<!--Contenido / CV-->
+<main class="cv-grid">
 
 
-<img src="imagen/Foto_CV_Alexander.JPG" alt="Foto de Alexander" width="200"> 
+    <!--COLUMNA IZQUIERDA-->
+    <aside class="cv_izquierda">
+    <section class="links">
+        <h3>Contáctame</h3>
+        <nav>
+            <ul>
+                <li><a href="mailto:alexander.lopez@ufm.edu">Correo</a></li>
+                <li><a href="https://github.com/AyyCanchito" target="_blank">Github</a></li>
+                <li><a href="https://gt.linkedin.com/" target="blank">Linkedin</a></li>
+            </ul>
+        </nav>
+    </section>
+
+
+    <!--Lista/Hobbies-->
+    <section class="bloque">
+        <h3>Hobbies</h3>
+        <ul>
+            <li>Estudiar</li>
+            <li>Leer</li>
+            <li>Me gusta jugar videojuegos</li>
+        </ul>
+    </section>
+
+
+    <!--Lista/Habilidades-->
+    <section class="bloque">
+        <h3>Habilidades</h3>
+        <ul>
+            <li>Programar con Python</li>
+            <li>Conocimiento en Hardware</li>
+            <li>Ingles (intermedio)</li>
+        </ul>
+    </section>
+
+    </aside>
+
+
+<!--COLUMNA DERECHA-->
+    <section class="cv_derecha">
+
+        <section class="bloque">
+        <h3>Educación</h3>
+
+            <table class="educacion">
+                <caption>Historial Académico</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Año</th>
+                        <th scope="col">Institución</th> 
+                        <th scope="col">Titulo</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">2016 - 2023</td>
+                        <td>Colegio Hebrón</td>
+                        <td>Bachiller en Ciencias y Letras</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+    <!--Tabla/Proyectos personales-->
+    <section class="Proyecto_personales">
+        <h3>Proyectos</h3>
+
+        <table class="proyectos">
+            <caption>Proyecto personales</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Periodo</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Puesto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">2020 - 2021</td>
+                    <td>Karate</td>
+                    <td>Coach</td>
+                </tr>
+                <tr>
+                    <td scope="row">2025 - continúa</td>
+                    <td>Contenido</td>
+                    <td>Streamer/Youtuber</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    </section>
+
+</main>
+
+</body>
+
+
