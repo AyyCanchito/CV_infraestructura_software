@@ -33,3 +33,9 @@ margin-bottom: 0.2rem;
 font-weight: 500;
 opacity: 0.95;
 }
+
+.btn {
+color: #ededed;
+position: relative;
+margin: 20px
+}
