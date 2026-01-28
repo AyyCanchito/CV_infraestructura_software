@@ -1,123 +1,150 @@
-<!--title-->
+<!DOCTYPE html>
+
+<html lang="es">
+
+
 <head>
-    <title>CV</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CV — Alexander López</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css"> <!--CSS-->
 </head>
-
-
 <body>
 
-
-<!--Header-->
-<header class="header">
-    <img src="imagen/Foto_CV_Alexander.JPG" alt="Foto de Alexander" width="200" class="foto"> <!--IMAGEN-->
-    <div class="texto-header">
-        <h1>Alexander López</h1>
-        <p class="subtitulo">Estudiante / Desarrollador</p>
+<!--HEADER-->
+<header class="cv-header bg-primary text-white py-4">
+    <div class="container text-center">
+    <h1 class="m-0">Alexander López</h1>
+    <p class="m-0 subtitulo">Estudiante / Desarrollador</p>
     </div>
 </header>
 
-
-<!--Contenido / CV-->
-<main class="cv-grid">
-
+<!--MAIN-->
+<main class="container my-4">
+    <div class="row">
 
     <!--COLUMNA IZQUIERDA-->
-    <aside class="cv_izquierda">
-    <section class="links">
-        <h3>Contáctame</h3>
+    <aside class="col-12 col-md-4 col-lg-3 bg-light p-4">
+        <div class="text-center mb-4">
+        <img
+            src="imagen/Foto_CV_Alexander.JPG" alt="Foto de Alexander" class="img-fluid rounded-circle border border-3 border-white shadow-sm"
+            style="width: 120px; height: 120px; object-fit: cover;"
+        >
+        </div>
+
+        <!--Contacto-->
+        <section class="mb-4">
+        <h4 class="text-uppercase fw-bold border-bottom pb-2">Contáctame</h4>
         <nav>
-            <ul>
-                <li><a href="mailto:alexander.lopez@ufm.edu">Correo</a></li>
-                <li><a href="https://github.com/AyyCanchito" target="_blank">Github</a></li>
-                <li><a href="https://gt.linkedin.com/" target="blank">Linkedin</a></li>
+            <ul class="list-unstyled small mt-3">
+            <li class="mb-2"><a href="mailto:alexander.lopez@ufm.edu">Correo</a></li>
+            <li class="mb-2"><a href="https://github.com/AyyCanchito" target="_blank" rel="noopener">Github</a></li>
+            <li class="mb-2"><a href="https://gt.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
             </ul>
         </nav>
-    </section>
-
-
-    <!--Lista/Hobbies-->
-    <section class="bloque">
-        <h3>Hobbies</h3>
-        <ul>
-            <li>Estudiar</li>
-            <li>Leer</li>
-            <li>Me gusta jugar videojuegos</li>
-        </ul>
-    </section>
-
-
-    <!--Lista/Habilidades-->
-    <section class="bloque">
-        <h3>Habilidades</h3>
-        <ul>
-            <li>Programar con Python</li>
-            <li>Conocimiento en Hardware</li>
-            <li>Ingles (intermedio)</li>
-        </ul>
-    </section>
-
-    </aside>
-
-
-<!--COLUMNA DERECHA-->
-    <section class="cv_derecha">
-
-        <section class="bloque">
-        <h3>Educación</h3>
-
-            <table class="educacion">
-                <caption>Historial Académico</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Año</th>
-                        <th scope="col">Institución</th> 
-                        <th scope="col">Titulo</th> 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td scope="row">2016 - 2023</td>
-                        <td>Colegio Hebrón</td>
-                        <td>Bachiller en Ciencias y Letras</td>
-                    </tr>
-                </tbody>
-            </table>
         </section>
 
+        <!--Idiomas-->
+        <section class="mb-4">
+        <h4 class="text-uppercase fw-bold border-bottom pb-2">Idiomas</h4>
 
-    <!--Tabla/Proyectos personales-->
-    <section class="Proyecto_personales">
-        <h3>Proyectos</h3>
+        <div class="mt-3">
+            <small>Español</small>
+            <div class="progress mb-2" style="height: 6px;">
+            <div class="progress-bar bg-primary" style="width: 100%"></div>
+            </div>
 
-        <table class="proyectos">
-            <caption>Proyecto personales</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Periodo</th>
-                    <th scope="col">Tipo</th>
-                    <th scope="col">Puesto</th>
-                </tr>
+            <small>Inglés (intermedio)</small>
+            <div class="progress mb-2" style="height: 6px;">
+            <div class="progress-bar bg-primary" style="width: 70%"></div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Hobbies -->
+        <section class="mb-4">
+        <h4 class="text-uppercase fw-bold border-bottom pb-2">Hobbies</h4>
+        <ul class="mb-0">
+            <li class="mb-1">Estudiar</li>
+            <li class="mb-1">Leer</li>
+            <li class="mb-1">Me gusta jugar videojuegos</li>
+        </ul>
+        </section>
+
+        <!-- Habilidades -->
+        <section class="mb-4">
+        <h4 class="text-uppercase fw-bold border-bottom pb-2">Habilidades</h4>
+        <ul class="mb-0">
+            <li class="mb-1">Programar con Python</li>
+            <li class="mb-1">Conocimiento en Hardware</li>
+            <li class="mb-1">Inglés (intermedio)</li>
+        </ul>
+        </section>
+    </aside>
+
+    <!-- COLUMNA DERECHA -->
+    <section class="col-12 col-md-8 col-lg-9 p-4">
+
+        <!-- EDUCACIÓN -->
+        <section class="mb-5">
+        <h5 class="text-uppercase fw-bold border-bottom pb-2">Educación</h5>
+
+        <table class="table table-striped table-bordered align-middle mt-3">
+            <caption class="caption-top fw-bold">Historial Académico</caption>
+            <thead class="table-light">
+            <tr>
+                <th scope="col">Año</th>
+                <th scope="col">Institución</th>
+                <th scope="col">Título</th>
+            </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td scope="row">2020 - 2021</td>
-                    <td>Karate</td>
-                    <td>Coach</td>
-                </tr>
-                <tr>
-                    <td scope="row">2025 - continúa</td>
-                    <td>Contenido</td>
-                    <td>Streamer/Youtuber</td>
-                </tr>
+            <tr>
+                <th scope="row">2016 - 2023</th>
+                <td>Colegio Hebrón</td>
+                <td>Bachiller en Ciencias y Letras</td>
+            </tr>
             </tbody>
         </table>
-    </section>
+        </section>
 
-    </section>
+        <!-- PROYECTOS -->
+        <section>
+        <h5 class="text-uppercase fw-bold border-bottom pb-2">Proyectos</h5>
 
+        <table class="table table-striped table-bordered align-middle mt-3">
+            <caption class="caption-top fw-bold">Proyectos personales</caption>
+            <thead class="table-light">
+            <tr>
+                <th scope="col">Periodo</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Puesto</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">2020 - 2021</th>
+                <td>Karate</td>
+                <td>Coach</td>
+            </tr>
+            <tr>
+                <th scope="row">2025 - continúa</th>
+                <td>Contenido</td>
+                <td>Streamer / Youtuber</td>
+            </tr>
+            </tbody>
+        </table>
+        </section>
+
+    </section> 
+
+    </div> 
 </main>
 
 </body>
-
-
+</html>
