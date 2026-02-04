@@ -39,3 +39,8 @@ color: #ededed;
 position: relative;
 margin: 20px
 }
+
+.cv-header #saludo {
+    color:rgb(65, 229, 234);
+    font-weight: bold;
+}
