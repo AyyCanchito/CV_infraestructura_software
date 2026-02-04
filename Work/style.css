@@ -44,3 +44,20 @@ margin: 20px
     color:rgb(65, 229, 234);
     font-weight: bold;
 }
+
+/* Toggle (mostrar y ocultar las pestañas) */
+.toggle-body {
+    transition: none;
+}
+
+.toggle-body.collapsed {
+    display: none !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Ajuste visual del botón pequeño */
+.toggle-btn {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.6rem;
+}

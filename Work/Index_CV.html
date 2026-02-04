@@ -92,11 +92,17 @@
     <!-- COLUMNA DERECHA -->
     <section class="col-12 col-md-8 col-lg-9 p-4">
 
-        <!-- EDUCACIÓN -->
+    <!-- EDUCACIÓN (con toggle) -->
         <section class="mb-5">
-        <h5 class="text-uppercase fw-bold border-bottom pb-2">Educación</h5>
+        <div class="d-flex justify-content-between align-items-center">
+        <h5 class="text-uppercase fw-bold border-bottom pb-2 m-0">Educación</h5>
+        <button class="btn btn-sm btn-outline-primary toggle-btn" data-target="educacion-body" aria-expanded="true" aria-controls="educacion-body">
+            Ocultar
+        </button>
+        </div>
 
-        <table class="table table-striped table-bordered align-middle mt-3">
+        <div id="educacion-body" class="toggle-body mt-3">
+        <table class="table table-striped table-bordered align-middle">
             <caption class="caption-top fw-bold">Historial Académico</caption>
             <thead class="table-light">
             <tr>
@@ -113,13 +119,20 @@
             </tr>
             </tbody>
         </table>
+        </div>
         </section>
 
-        <!-- PROYECTOS -->
+    <!-- PROYECTOS (con toggle) -->
         <section>
-        <h5 class="text-uppercase fw-bold border-bottom pb-2">Proyectos</h5>
+        <div class="d-flex justify-content-between align-items-center">
+        <h5 class="text-uppercase fw-bold border-bottom pb-2 m-0">Proyectos</h5>
+        <button class="btn btn-sm btn-outline-primary toggle-btn" data-target="proyectos-body" aria-expanded="true" aria-controls="proyectos-body">
+            Ocultar
+        </button>
+        </div>
 
-        <table class="table table-striped table-bordered align-middle mt-3">
+        <div id="proyectos-body" class="toggle-body mt-3">
+        <table class="table table-striped table-bordered align-middle">
             <caption class="caption-top fw-bold">Proyectos personales</caption>
             <thead class="table-light">
             <tr>
@@ -141,9 +154,9 @@
             </tr>
             </tbody>
         </table>
+        </div>
         </section>
-    </section> 
-    </div> 
+
 </main>
     <script src="script.js"></script>
 </body>
