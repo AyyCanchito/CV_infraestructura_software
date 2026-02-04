@@ -38,16 +38,28 @@
         >
         </div>
 
-        <!--Contacto-->
+        <!-- CONTACTO (con toggle) -->
         <section class="mb-4">
-        <h4 class="text-uppercase fw-bold border-bottom pb-2">Contáctame</h4>
-        <nav>
-            <ul class="list-unstyled small mt-3">
-            <li class="mb-2"><a href="mailto:alexander.lopez@ufm.edu">Correo</a></li>
-            <li class="mb-2"><a href="https://github.com/AyyCanchito" target="_blank" rel="noopener">Github</a></li>
-            <li class="mb-2"><a href="https://gt.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
+        <div class="d-flex justify-content-between align-items-center">
+            <h4 class="text-uppercase fw-bold border-bottom pb-2 m-0">Contáctame</h4>
+            <button
+            class="btn btn-sm btn-outline-primary toggle-btn"
+            data-target="contacto-body"
+            aria-expanded="true"
+            aria-controls="contacto-body">
+            Ocultar
+            </button>
+        </div>
+
+        <div id="contacto-body" class="toggle-body mt-3">
+            <nav>
+            <ul class="list-unstyled small">
+                <li class="mb-2"><a href="mailto:alexander.lopez@ufm.edu">Correo</a></li>
+                <li class="mb-2"><a href="https://github.com/AyyCanchito" target="_blank" rel="noopener">Github</a></li>
+                <li class="mb-2"><a href="https://gt.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
             </ul>
-        </nav>
+            </nav>
+        </div>
         </section>
 
         <!--Idiomas-->
