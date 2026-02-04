@@ -123,3 +123,9 @@ body.dark-mode .btn {
 body.dark-mode .border-bottom {
     border-bottom-color: rgba(255, 255, 255, 0.15) !important;
 }
+
+/* Ocultar habilidades que no coinciden */
+.habilidad-hidden {
+    display: none !important;
+}
+

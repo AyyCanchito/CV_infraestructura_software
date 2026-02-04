@@ -38,6 +38,34 @@ btn.addEventListener("click", () => {
 });
 }
 
+// --- Buscador de habilidades ---
+function setupSkillSearch() {
+const input = document.getElementById("skill-search");
+const ul = document.getElementById("habilidades-list");
+if (!input || !ul) {
+    console.warn("Buscador de habilidades: elementos no encontrados");
+    return;
+}
+
+const items = Array.from(ul.querySelectorAll("li"));
+
+// Filtrado 
+input.addEventListener("input", () => {
+    const q = input.value.trim().toLowerCase();
+    if (q === "") {
+    // mostrar 
+    items.forEach(li => li.classList.remove("habilidad-hidden"));
+    return;
+    }
+
+    items.forEach(li => {
+    const text = li.textContent.trim().toLowerCase();
+    const match = text.includes(q);
+    li.classList.toggle("habilidad-hidden", !match);
+    });
+});
+}
+
 // Modo OSCURO 
 const THEME_KEY = "mi_cv_theme";
 
@@ -84,4 +112,5 @@ mostrarSaludo();
 setupTogglesSimple();
 initThemeFromStorageOrSystem();
 setupDarkModeButton();
+setupSkillSearch();
 });
