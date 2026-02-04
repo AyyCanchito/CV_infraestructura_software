@@ -4,16 +4,17 @@
 
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>CV — Alexander López</title>
+    <title>CV — Alexander López</title>
 
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css"> <!--CSS-->
+    <link rel="stylesheet" href="style.css"> <!--CSS-->
 </head>
+
 <body>
 
 <!--HEADER-->
@@ -21,8 +22,17 @@
     <div class="container text-center">
     <h1 class="m-0">Alexander López</h1>
     <p class="m-0 subtitulo">Estudiante / Desarrollador</p>
+    <p id="saludo" class="m-0"></p>
+    <!--Botón Modo Oscuro-->
+    <div class="mt-2">
+        <button id="btn-darkmode" class="btn btn-sm btn-outline-light" aria-pressed="false">
+        Activar modo oscuro
+        </button>
+    </div>
     </div>
 </header>
+
+
 
 <!--MAIN-->
 <main class="container my-4">
@@ -37,16 +47,28 @@
         >
         </div>
 
-        <!--Contacto-->
+        <!-- CONTACTO (con toggle) -->
         <section class="mb-4">
-        <h4 class="text-uppercase fw-bold border-bottom pb-2">Contáctame</h4>
-        <nav>
-            <ul class="list-unstyled small mt-3">
-            <li class="mb-2"><a href="mailto:alexander.lopez@ufm.edu">Correo</a></li>
-            <li class="mb-2"><a href="https://github.com/AyyCanchito" target="_blank" rel="noopener">Github</a></li>
-            <li class="mb-2"><a href="https://gt.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
+        <div class="d-flex justify-content-between align-items-center">
+            <h4 class="text-uppercase fw-bold border-bottom pb-2 m-0">Contáctame</h4>
+            <button
+            class="btn btn-sm btn-outline-primary toggle-btn"
+            data-target="contacto-body"
+            aria-expanded="true"
+            aria-controls="contacto-body">
+            Ocultar
+            </button>
+        </div>
+
+        <div id="contacto-body" class="toggle-body mt-3">
+            <nav>
+            <ul class="list-unstyled small">
+                <li class="mb-2"><a href="mailto:alexander.lopez@ufm.edu">Correo</a></li>
+                <li class="mb-2"><a href="https://github.com/AyyCanchito" target="_blank" rel="noopener">Github</a></li>
+                <li class="mb-2"><a href="https://gt.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
             </ul>
-        </nav>
+            </nav>
+        </div>
         </section>
 
         <!--Idiomas-->
@@ -79,6 +101,13 @@
         <!-- Habilidades -->
         <section class="mb-4">
         <h4 class="text-uppercase fw-bold border-bottom pb-2">Habilidades</h4>
+
+        <!-- Buscador de habilidades -->
+        <div class="mb-2">
+            <input id="skill-search" type="search" class="form-control form-control-sm"
+            placeholder="Buscar habilidad (ej. Python, Hardware)">
+        </div>
+
         <ul class="mb-0">
             <li class="mb-1">Programar con Python</li>
             <li class="mb-1">Conocimiento en Hardware</li>
@@ -91,11 +120,17 @@
     <!-- COLUMNA DERECHA -->
     <section class="col-12 col-md-8 col-lg-9 p-4">
 
-        <!-- EDUCACIÓN -->
+    <!-- EDUCACIÓN (con toggle) -->
         <section class="mb-5">
-        <h5 class="text-uppercase fw-bold border-bottom pb-2">Educación</h5>
+        <div class="d-flex justify-content-between align-items-center">
+        <h5 class="text-uppercase fw-bold border-bottom pb-2 m-0">Educación</h5>
+        <button class="btn btn-sm btn-outline-primary toggle-btn" data-target="educacion-body" aria-expanded="true" aria-controls="educacion-body">
+            Ocultar
+        </button>
+        </div>
 
-        <table class="table table-striped table-bordered align-middle mt-3">
+        <div id="educacion-body" class="toggle-body mt-3">
+        <table class="table table-striped table-bordered align-middle">
             <caption class="caption-top fw-bold">Historial Académico</caption>
             <thead class="table-light">
             <tr>
@@ -112,13 +147,20 @@
             </tr>
             </tbody>
         </table>
+        </div>
         </section>
 
-        <!-- PROYECTOS -->
+    <!-- PROYECTOS (con toggle) -->
         <section>
-        <h5 class="text-uppercase fw-bold border-bottom pb-2">Proyectos</h5>
+        <div class="d-flex justify-content-between align-items-center">
+        <h5 class="text-uppercase fw-bold border-bottom pb-2 m-0">Proyectos</h5>
+        <button class="btn btn-sm btn-outline-primary toggle-btn" data-target="proyectos-body" aria-expanded="true" aria-controls="proyectos-body">
+            Ocultar
+        </button>
+        </div>
 
-        <table class="table table-striped table-bordered align-middle mt-3">
+        <div id="proyectos-body" class="toggle-body mt-3">
+        <table class="table table-striped table-bordered align-middle">
             <caption class="caption-top fw-bold">Proyectos personales</caption>
             <thead class="table-light">
             <tr>
@@ -140,12 +182,11 @@
             </tr>
             </tbody>
         </table>
+        </div>
         </section>
 
-    </section> 
-
-    </div> 
 </main>
+    <script src="script.js"></script>
 
 </body>
 </html>
