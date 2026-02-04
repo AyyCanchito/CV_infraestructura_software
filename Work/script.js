@@ -1,29 +1,20 @@
-// script.js 
-
-console.log("script.js cargado - toggle simple");
+console.log("script.js cargado (inicio)");
 
 // SALUDO
 function mostrarSaludo() {
 const saludoElem = document.getElementById("saludo");
-
 if (!saludoElem) return;
 const hora = new Date().getHours();
 let mensaje = "";
-
 if (hora >= 6 && hora < 12) mensaje = "Buenos días";
-
 else if (hora >= 12 && hora < 18) mensaje = "Buenas tardes";
-
 else mensaje = "Buenas noches";
-
 saludoElem.textContent = mensaje;
 }
 
-// Display de las tablas
+// Botones para el display de las tablas
 function setupTogglesSimple() {
 const toggles = document.querySelectorAll(".toggle-btn");
-if (!toggles.length) console.warn("No se encontraron botones .toggle-btn");
-
 toggles.forEach(btn => {
 const targetId = btn.getAttribute("data-target");
 const target = document.getElementById(targetId);
@@ -31,8 +22,6 @@ if (!target) {
     console.warn("Toggle target no encontrado:", targetId);
     return;
 }
-
-// Aria expanded
 const expandedAttr = btn.getAttribute("aria-expanded");
 if (expandedAttr === "false") {
     target.classList.add("collapsed");
@@ -41,7 +30,6 @@ if (expandedAttr === "false") {
     target.classList.remove("collapsed");
     btn.textContent = "Ocultar";
 }
-
 btn.addEventListener("click", () => {
     const isCollapsed = target.classList.toggle("collapsed");
     btn.setAttribute("aria-expanded", (!isCollapsed).toString());
@@ -50,7 +38,50 @@ btn.addEventListener("click", () => {
 });
 }
 
+// Modo OSCURO 
+const THEME_KEY = "mi_cv_theme";
+
+function updateButtonText(isDark) {
+const btn = document.getElementById("btn-darkmode");
+if (!btn) return;
+btn.setAttribute("aria-pressed", isDark.toString());
+btn.textContent = isDark ? "Desactivar modo oscuro" : "Activar modo oscuro";
+}
+
+function applyTheme(isDark, save = true) {
+if (isDark) document.body.classList.add("dark-mode");
+else document.body.classList.remove("dark-mode");
+updateButtonText(isDark);
+if (save) localStorage.setItem(THEME_KEY, isDark ? "dark" : "light");
+console.log("Tema aplicado:", isDark ? "dark" : "light");
+}
+
+function setupDarkModeButton() {
+const btn = document.getElementById("btn-darkmode");
+if (!btn) {
+console.warn("Botón #btn-darkmode no encontrado en el DOM.");
+return;
+}
+btn.addEventListener("click", () => {
+const isDarkNow = document.body.classList.contains("dark-mode");
+applyTheme(!isDarkNow, true);
+});
+}
+
+function initThemeFromStorageOrSystem() {
+const saved = localStorage.getItem(THEME_KEY);
+if (saved === "dark") { applyTheme(true, false); return; }
+if (saved === "light") { applyTheme(false, false); return; }
+// Si no hay guardado, usar preferencia del sistema
+const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+applyTheme(prefersDark, false);
+}
+
+// EL DOM LISTO
 document.addEventListener("DOMContentLoaded", () => {
+console.log("DOMContentLoaded fired");
 mostrarSaludo();
 setupTogglesSimple();
+initThemeFromStorageOrSystem();
+setupDarkModeButton();
 });

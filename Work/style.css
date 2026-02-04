@@ -61,3 +61,65 @@ margin: 20px
     font-size: 0.85rem;
     padding: 0.25rem 0.6rem;
 }
+
+/* todoS LOS CAMBIOS PARA EL MODO OSCURO */
+
+body.dark-mode {
+    background: #0f1720;
+    color: #e6eef9;
+}
+
+/* Header oscuro */
+body.dark-mode .cv-header {
+    background: linear-gradient(90deg, #0b1220 0%, #16202a 100%);
+    color: #f7f7f7;
+}
+
+/* Títulos */
+body.dark-mode h1,
+body.dark-mode h4,
+body.dark-mode h5 {
+    color: #f7f7f7;
+}
+
+/* Saludo */
+body.dark-mode .cv-header #saludo {
+    color: #4dd0e1;
+}
+
+/* Columnas y tarjetas */
+body.dark-mode aside {
+    background: #0c1116 !important;
+    color: #e6eef9;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Tablas */
+body.dark-mode table {
+    background-color: #0c1116;
+    color: #e6eef9;
+}
+
+body.dark-mode .table-light {
+    background-color: #121a24 !important;
+    color: #e6eef9;
+}
+
+body.dark-mode .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Enlaces */
+body.dark-mode a {
+    color: #4dd0e1;
+}
+
+/* Botones */
+body.dark-mode .btn {
+    color: #ffffff;
+}
+
+/* Bordes */
+body.dark-mode .border-bottom {
+    border-bottom-color: rgba(255, 255, 255, 0.15) !important;
+}
