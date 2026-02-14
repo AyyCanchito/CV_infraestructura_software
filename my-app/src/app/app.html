@@ -1,5 +1,13 @@
-<app-header/>
+<app-header></app-header>
 
-<main>
-  <router-outlet/>
-</main>
+<div class="layout">
+
+  <app-columna-izquierda></app-columna-izquierda>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <app-columna-derecha></app-columna-derecha>
+
+</div>

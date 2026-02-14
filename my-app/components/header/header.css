@@ -1,29 +1,38 @@
+:root {
+    --purple-900: #3c096c;
+    --purple-800: #4b0082;
+    --purple-700: #5a189a;
+    --purple-600: #580e99;
+}
+
 .cv-header {
-background: linear-gradient(90deg, #1e75cc 0%, #97BEF2 100%);
-color: #f4f1f1;
-position: relative;
-padding: 2.2rem 0 4.2rem;
-box-shadow: 0 6px 18px rgba(43, 122, 201, 0.08);
+    padding: 70px;
+    position: relative;
+    background: linear-gradient(
+    135deg,
+    var(--purple-900) 0%,
+    var(--purple-800) 30%,
+    var(--purple-700) 60%,
+    var(--purple-600) 100%
+    );
+    color: white;
+    box-shadow: 0 8px 30px rgba(38, 0, 76, 0.25);
+    overflow: hidden;
 }
 
 .cv-header h1 {
-font-size: 1.9rem;
-font-weight: 700;
-margin-bottom: 0.2rem;
+    font-size: 3.5rem;
+    font-weight: 700;
 }
 
-.subtitulo {
-font-weight: 500;
-opacity: 0.95;
+.cv-header .subtitulo {
+    opacity: 0.9;
 }
 
-.btn {
-color: #ededed;
-position: relative;
-margin: 20px
-}
-
-.cv-header #saludo {
-    color:rgb(65, 229, 234);
-    font-weight: bold;
+.header-wave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    color: #ffffff;
 }
