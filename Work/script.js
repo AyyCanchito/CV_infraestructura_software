@@ -4,7 +4,7 @@ console.log("script.js cargado (inicio)");
 function mostrarSaludo() {
 const saludoElem = document.getElementById("saludo");
 if (!saludoElem) return;
-const hora = new Date().getHours();
+const hora = new Date().getHours(); 
 let mensaje = "";
 if (hora >= 6 && hora < 12) mensaje = "Buenos días";
 else if (hora >= 12 && hora < 18) mensaje = "Buenas tardes";

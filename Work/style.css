@@ -62,7 +62,9 @@ margin: 20px
     padding: 0.25rem 0.6rem;
 }
 
-/* todoS LOS CAMBIOS PARA EL MODO OSCURO */
+
+
+/*MODO OSCURO */
 
 body.dark-mode {
     background: #0f1720;

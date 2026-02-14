@@ -1,0 +1,29 @@
+.cv-header {
+background: linear-gradient(90deg, #1e75cc 0%, #97BEF2 100%);
+color: #f4f1f1;
+position: relative;
+padding: 2.2rem 0 4.2rem;
+box-shadow: 0 6px 18px rgba(43, 122, 201, 0.08);
+}
+
+.cv-header h1 {
+font-size: 1.9rem;
+font-weight: 700;
+margin-bottom: 0.2rem;
+}
+
+.subtitulo {
+font-weight: 500;
+opacity: 0.95;
+}
+
+.btn {
+color: #ededed;
+position: relative;
+margin: 20px
+}
+
+.cv-header #saludo {
+    color:rgb(65, 229, 234);
+    font-weight: bold;
+}
