@@ -1,0 +1,73 @@
+.cv-sidebar {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+.section {
+    margin-bottom: 30px;
+    }
+
+.section-title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #5a189a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    position: relative;
+    }
+
+.section-title::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: #7b2cbf;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-radius: 3px;
+    }
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+.info-list li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+    }
+
+/* Estilos para la parte de idiomas */ 
+
+.idiomas-section .idioma-item {
+    margin-bottom: 18px;
+}
+
+.idioma-nombre {
+    font-weight: 600;
+    color: #333;
+}
+
+.idioma-nivel {
+    color: #777;
+    font-size: 12px;
+}
+
+.custom-progress {
+    height: 8px;
+    border-radius: 10px;
+    background-color: #eee;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.bg-purple {
+    background: linear-gradient(90deg, #5a189a, #7b2cbf);
+    border-radius: 10px;
+    transition: width 0.6s ease;
+}

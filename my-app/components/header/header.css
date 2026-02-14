@@ -1,8 +1,8 @@
-:root {
+:host {
     --purple-900: #3c096c;
     --purple-800: #4b0082;
     --purple-700: #5a189a;
-    --purple-600: #580e99;
+    --purple-600: #7f3cba;
 }
 
 .cv-header {
