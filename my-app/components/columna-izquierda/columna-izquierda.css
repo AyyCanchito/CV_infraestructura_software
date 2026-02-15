@@ -1,0 +1,64 @@
+/* Contenedor principal */
+.cv-sidebar {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Secciones */
+.section {
+    margin-bottom: 30px;
+}
+
+/* Títulos */
+.section-title {
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #5a189a;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Línea decorativa debajo del título */
+.section-title::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #5a189a, #7b2cbf);
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 5px;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Links */
+.info-list a {
+    color: #5a189a;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.info-list a:hover {
+    color: #7b2cbf;
+}
+
+/* Idiomas */
+.idioma-item {
+    margin-bottom: 18px;
+}
+
+.idioma-nombre {
+    font-weight: 600;
+    font-size: 13px;
+    color: #333;
+}
