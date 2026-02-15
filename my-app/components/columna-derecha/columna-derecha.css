@@ -1,0 +1,52 @@
+.columna-derecha {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+.section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section h5 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #5a189a;
+    margin-bottom: 15px;
+}
+
+.section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.item .fecha {
+    font-weight: bold;
+    color: #5a189a;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card {
+    background: #fff;
+    padding: 18px;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    max-width: 600px;
+}
+
+.card h6 {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #555;
+    }

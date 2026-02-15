@@ -1,73 +1,64 @@
+/* Contenedor principal */
 .cv-sidebar {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    }
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+/* Secciones */
 .section {
     margin-bottom: 30px;
-    }
+}
 
+/* Títulos */
 .section-title {
     font-weight: 700;
-    font-size: 16px;
-    color: #5a189a;
+    font-size: 13px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    color: #5a189a;
     margin-bottom: 15px;
     position: relative;
-    }
+}
 
+/* Línea decorativa debajo del título */
 .section-title::after {
     content: "";
     width: 40px;
     height: 3px;
-    background: #7b2cbf;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    border-radius: 3px;
-    }
-
-.info-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    }
+    background: linear-gradient(90deg, #5a189a, #7b2cbf);
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 5px;
+}
 
 .info-list li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 14px;
-    color: #333;
-    }
+    color: #444;
+}
 
-/* Estilos para la parte de idiomas */ 
+/* Links */
+.info-list a {
+    color: #5a189a;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
-.idiomas-section .idioma-item {
+.info-list a:hover {
+    color: #7b2cbf;
+}
+
+/* Idiomas */
+.idioma-item {
     margin-bottom: 18px;
 }
 
 .idioma-nombre {
     font-weight: 600;
+    font-size: 13px;
     color: #333;
-}
-
-.idioma-nivel {
-    color: #777;
-    font-size: 12px;
-}
-
-.custom-progress {
-    height: 8px;
-    border-radius: 10px;
-    background-color: #eee;
-    margin-top: 5px;
-    overflow: hidden;
-}
-
-.bg-purple {
-    background: linear-gradient(90deg, #5a189a, #7b2cbf);
-    border-radius: 10px;
-    transition: width 0.6s ease;
 }
