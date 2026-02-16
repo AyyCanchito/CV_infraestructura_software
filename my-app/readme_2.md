@@ -1,0 +1,1 @@
+Buenas Ricardo, te escribo este readme ya que tengo un problema que no puedo comparar el entregable 7, en github me indica que son indenticos, y ya trate de todas las formas posibles y no puedo arreglarlo, al igual que la imagen, VS CODE me indica que no puede leerla. 
