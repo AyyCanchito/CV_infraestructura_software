@@ -52,7 +52,7 @@
         <ul class="info-list list-unstyled mt-3">
             <li>Programar</li>
             <li>Viajar</li>
-            <li>Leer y aprender cosas nuevas</li>
+            <li>Crear música</li>
         </ul>
     </section>
 
@@ -63,20 +63,17 @@
         <h5 class="section-title">Habilidades</h5>
 
     <ul class="info-list list-unstyled mt-3">
-        <li>Angular</li>
-        <li>JavaScript</li>
-        <li>HTML / CSS</li>
-        <li>Python</li>
-        <li>Microsoft Office</li>
+        <li *ngFor="let habilidad of dataService.habilidades">{{ habilidad }}</li>
 
-    <li class="desplegable" (click)="toggleSoftwares()">Softwares<span class="flecha">{{ mostrarSoftwares ? '▲' : '▼' }}</span>
-        <ul class="sub-lista list-unstyled" *ngIf="mostrarSoftwares">
-            <li>Canva</li>
-            <li>Figma</li>
-            <li>VS Code</li>
-            <li>PyCharm</li>
-        </ul>
-    </li>
+    <!-- Funcion para que se despliegue la pestaña de software -->
+        <li class="desplegable" (click)="toggleSoftwares()">Softwares
+            <span class="flecha">{{ mostrarSoftwares ? '▲' : '▼' }}</span>
+
+            <!-- Softwares desde el servicio -->
+            <ul class="sub-lista list-unstyled" *ngIf="mostrarSoftwares">
+                <li *ngFor="let software of dataService.softwares">{{ software }}</li>
+            </ul>
+        </li>
 
     </ul>
 
