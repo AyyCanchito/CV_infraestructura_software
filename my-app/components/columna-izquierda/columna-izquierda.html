@@ -63,7 +63,7 @@
         <h5 class="section-title">Habilidades</h5>
 
     <ul class="info-list list-unstyled mt-3">
-        <li *ngFor="let habilidad of dataService.habilidades">{{ habilidad }}</li>
+        <li *ngFor="let habilidad of dataService.habilidades">{{ habilidad | lowercaseVowels }}</li>
 
     <!-- Funcion para que se despliegue la pestaña de software -->
         <li class="desplegable" (click)="toggleSoftwares()">Softwares
@@ -71,7 +71,7 @@
 
             <!-- Softwares desde el servicio -->
             <ul class="sub-lista list-unstyled" *ngIf="mostrarSoftwares">
-                <li *ngFor="let software of dataService.softwares">{{ software }}</li>
+                <li *ngFor="let software of dataService.softwares | reverse">{{ software }}</li>
             </ul>
         </li>
 
