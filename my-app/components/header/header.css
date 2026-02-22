@@ -46,3 +46,29 @@
     border: 4px solid white;
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
+
+/*BOTONES DE LA ESQUINA SUPERIOR DERECHA*/
+.botones-nav {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    display: flex;
+    gap: 0.6rem; 
+}
+
+.btn-historia {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 0.4rem 1.1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap; 
+}
+
+.btn-historia:hover {
+    background-color: white;
+    color: #333;
+}

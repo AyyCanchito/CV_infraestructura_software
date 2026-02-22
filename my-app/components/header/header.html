@@ -10,11 +10,15 @@
     <div class="header-text">
     <h1 class="display-5 fw-bold">Alexander López</h1>
     
-    <p class="lead mb-2 subtitulo">
-        Estudiante / Desarrollador
-    </p>
+    <p class="lead mb-2 subtitulo">Estudiante / Desarrollador</p>
 
-    <p id="saludo" class="mb-0"></p>
+    <!--Botones esquina superior derecha-->
+    <div class="botones-nav">
+    <button (click)="scrollToSection()" class="btn-historia">Mi historia</button>
+    <button (click)="scrollToHabilidades()" class="btn-historia">Habilidades</button>
+    <button (click)="scrollToProyectos()" class="btn-historia">Proyectos personales</button>
+    </div>
+
     </div>
 
     </div>
