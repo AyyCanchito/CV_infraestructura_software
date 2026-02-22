@@ -62,3 +62,34 @@
     font-size: 13px;
     color: #333;
 }
+
+/*Dato softwares que se despliega*/
+
+.desplegable {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.desplegable:hover {
+    opacity: 0.8;
+}
+
+.flecha {
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.sub-lista {
+    padding-left: 1rem;
+    margin-top: 0.3rem;
+}
+
+.sub-lista li {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    padding: 0.15rem 0;
+}

@@ -1,38 +1,33 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
+  standalone: true,
   imports: [],
   templateUrl: './header.html',
-  styleUrls: ['./header.css'],
+  styleUrls: ['./header.css']
 })
 export class Header {
 
-  constructor(private location: Location) {}
+  constructor(private router: Router) {}
 
   scrollToSection() {
-    const el = document.getElementById('mi-historia');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-      this.location.replaceState('/mi-historia');
-    }
+    this.router.navigate(['/mi-historia']).then(() => {
+      document.getElementById('mi-historia')?.scrollIntoView({ behavior: 'smooth' });
+    });
   }
 
   scrollToHabilidades() {
-    const el = document.getElementById('habilidades');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-      window.history.replaceState(null, '', '/habilidades');
-    }
+    this.router.navigate(['/habilidades']).then(() => {
+      document.getElementById('habilidades')?.scrollIntoView({ behavior: 'smooth' });
+    });
   }
 
   scrollToProyectos() {
-    const el = document.getElementById('proyectos-personales');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-      window.history.replaceState(null, '', '/proyectos-personales');
-    }
+    this.router.navigate(['/proyectos-personales']).then(() => {
+      document.getElementById('proyectos-personales')?.scrollIntoView({ behavior: 'smooth' });
+    });
   }
 
 }
