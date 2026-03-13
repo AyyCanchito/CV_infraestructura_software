@@ -52,4 +52,17 @@
 
     </section>
 
+<!-- CHARIZARD (Poke API) -->
+<section class="section" id="pokemons">
+    <h5 class="section-title">Pokémon favorito</h5>
+
+    <div class="card" *ngIf="charizard">
+        <h6>{{ charizard.name | titlecase }}</h6>
+        <img [src]="charizard.sprites.front_default" alt="Charizard">
+        <p>Altura: {{ charizard.height / 10 }} m</p>
+        <p>Peso: {{ charizard.weight / 10 }} kg</p>
+        <p>Tipo: {{ charizard.types[0].type.name | titlecase }}</p>
+    </div>
+</section>
+
 </div>
