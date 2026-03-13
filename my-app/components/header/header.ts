@@ -13,21 +13,23 @@ export class Header {
   constructor(private router: Router) {}
 
   scrollToSection() {
-    this.router.navigate(['/mi-historia']).then(() => {
-      document.getElementById('mi-historia')?.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
-
-  scrollToHabilidades() {
-    this.router.navigate(['/habilidades']).then(() => {
-      document.getElementById('habilidades')?.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
-
-  scrollToProyectos() {
-    this.router.navigate(['/proyectos-personales']).then(() => {
-      document.getElementById('proyectos-personales')?.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
-
+    window.history.replaceState(null, '', '/mi-historia');
+    document.getElementById('mi-historia')?.scrollIntoView({ behavior: 'smooth' });
 }
+
+scrollToHabilidades() {
+    window.history.replaceState(null, '', '/habilidades');
+    document.getElementById('habilidades')?.scrollIntoView({ behavior: 'smooth' });
+}
+
+scrollToProyectos() {
+    window.history.replaceState(null, '', '/proyectos-personales');
+    document.getElementById('proyectos-personales')?.scrollIntoView({ behavior: 'smooth' });
+}
+
+scrollToProyectosGithub() {
+    window.history.replaceState(null, '', '/proyectos-github');
+    document.getElementById('proyectos-github')?.scrollIntoView({ behavior: 'smooth' });
+}
+    
+  }
