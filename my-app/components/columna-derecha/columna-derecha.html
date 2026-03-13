@@ -38,6 +38,18 @@
     </p>
     </div>
 
-</section>
+<!-- PROYECTOS GITHUB -->
+    <section class="section" id="proyectos-github">
+    <h5 class="section-title">Proyectos en GitHub</h5>
+
+     <div class="card" *ngFor="let repo of repos">
+        <h6>{{ repo.name }}</h6>
+        <p>{{ repo.description || 'Sin descripción' }}</p>
+        <a [href]="repo.html_url" target="_blank">Ver repositorio</a>
+    </div>
+    </section>
+    <section class="repos" id="proyectos-github"></section>
+
+    </section>
 
 </div>
