@@ -57,30 +57,31 @@ app.post('/skills', (req, res) => {
     res.status(201).json(newSkill);
 });
 
-// PATCH /projects/:id - Actualizar un proyecto
-app.patch('/projects/:id', (req, res) => {
-    const index = projects.findIndex(p => p.id === parseInt(req.params.id));
+// PATCH /skills/:id - Actualizar una habilidad
+app.patch('/skills/:id', (req, res) => {
+    const index = skills.findIndex(s => s.id === parseInt(req.params.id));
 
     if (index === -1) {
-        return res.status(404).json({ error: 'Proyecto no encontrado' });
+        return res.status(404).json({ error: 'Habilidad no encontrada' });
     }
 
-    projects[index] = { ...projects[index], ...req.body };
-    res.json(projects[index]);
-    });
+    skills[index] = { ...skills[index], ...req.body };
+    res.json(skills[index]);
+});
 
-    // DELETE /projects/:id - Eliminar un proyecto
-    app.delete('/projects/:id', (req, res) => {
-    const index = projects.findIndex(p => p.id === parseInt(req.params.id));
+// DELETE /skills/:id - Eliminar una habilidad
+app.delete('/skills/:id', (req, res) => {
+    const index = skills.findIndex(s => s.id === parseInt(req.params.id));
 
     if (index === -1) {
-        return res.status(404).json({ error: 'Proyecto no encontrado' });
+        return res.status(404).json({ error: 'Habilidad no encontrada' });
     }
 
-    const deleted = projects.splice(index, 1);
-    res.json({ message: 'Proyecto eliminado', project: deleted[0] });
-    });
+    const deleted = skills.splice(index, 1);
+    res.json({ message: 'Habilidad eliminada', skill: deleted[0] });
+});
 
-    app.listen(PORT, () => {
+// Iniciar servidor
+app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
