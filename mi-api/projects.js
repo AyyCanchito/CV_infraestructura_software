@@ -40,22 +40,21 @@ app.get('/skills/:id', (req, res) => {
     res.json(skill);
 });
 
-// POST /projects - Crear un proyecto
-app.post('/projects', (req, res) => {
-    const { name, stars } = req.body;
+// POST /skills - Agregar una habilidad
+app.post('/skills', (req, res) => {
+    const { name } = req.body;
 
     if (!name) {
         return res.status(400).json({ error: 'El campo "name" es requerido' });
     }
 
-    const newProject = {
+    const newSkill = {
         id: nextId++,
         name,
-        stars: stars || 0,
     };
 
-    projects.push(newProject);
-    res.status(201).json(newProject);
+    skills.push(newSkill);
+    res.status(201).json(newSkill);
 });
 
 // PATCH /projects/:id - Actualizar un proyecto
